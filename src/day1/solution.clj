@@ -1,8 +1,8 @@
 (ns day1.solution
+  (:require [clojure.string :refer [split-lines]])
   (:gen-class))
 
 (defn solve
-  [&args]
-  (println "hi")
-  true)
+  [freqs & args]
+  (reduce + (map read-string (split-lines (slurp freqs)))))
 
