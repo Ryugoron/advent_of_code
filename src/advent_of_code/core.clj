@@ -1,8 +1,10 @@
 (ns advent-of-code.core
-  (require [day1.solution :only [solve]])
+  (require [solutions.solution :as solution])
   (:gen-class))
 
-(def funs {"day1" day1.solution/solve})
+(def funs {"day1" solution/day1
+           "day2" solution/day2
+           "day3" solution/day3})
 
 (defn help [& args]
   (println "Welcome to Advent of Code 2018.\nUse one of the following commands/days to start:")
